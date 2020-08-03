@@ -33,6 +33,28 @@ class TrailersController extends Controller
         }
 
         return view('trailers.index', compact('trailers'));
+
+    }
+
+    public function galeria(Request $request)
+    {
+        $keyword = $request->get('search');
+        $perPage = 9;
+
+        if (!empty($keyword)) {
+            $trailers = Trailer::where('Titulo', 'LIKE', "%$keyword%")
+                ->orWhere('Sinopsis', 'LIKE', "%$keyword%")
+                ->orWhere('Genero', 'LIKE', "%$keyword%")
+                ->orWhere('Director', 'LIKE', "%$keyword%")
+                ->orWhere('Fecha', 'LIKE', "%$keyword%")
+                ->orWhere('Video', 'LIKE', "%$keyword%")
+                ->latest()->paginate($perPage);
+        } else {
+            $trailers = Trailer::latest()->paginate($perPage);
+        }
+
+        return view('welcome', compact('trailers'));
+
     }
 
     /**
@@ -54,9 +76,9 @@ class TrailersController extends Controller
      */
     public function store(Request $request)
     {
-        
+
         $requestData = $request->all();
-        
+
         Trailer::create($requestData);
 
         return redirect('trailers')->with('flash_message', 'Trailer added!');
@@ -100,9 +122,9 @@ class TrailersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
+
         $requestData = $request->all();
-        
+
         $trailer = Trailer::findOrFail($id);
         $trailer->update($requestData);
 
