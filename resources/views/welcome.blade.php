@@ -124,9 +124,11 @@
 					>
 				</div>
 			</div>
-		</nav>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
+        </nav>
+
+
+
+            {{-- @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
@@ -138,43 +140,46 @@
                         @endif
                     @endauth
                 </div>
-            @endif
+            @endif --}}
 
-            <div class="container mx-auto">
-                <div class="container mt-12 border-info-400 border-b-2 w-1/4">
-                    <h1 class="font-bold text-3xl">Peliculas Disponibles</h1>
-                </div>
-
-                <div class="container mx-auto flex flex-row justify-between flex-wrap">
-            @foreach ($trailers as $item)
-                <div class="max-w-sm rounded overflow-hidden shadow-lg mt-10">
-                    <iframe
-                        style="width: 100%;"
-                        height="215"
-                        src="{{ $item->Video }}"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen
-                    ></iframe>
-                    <div class="px-6 py-4">
-                        <div class="font-bold text-black text-xl mb-2">{{ $item->Titulo }}</div>
-                        <p class="text-gray-700 text-base">
-                            {{ $item->Sinopsis }}
-                        </p>
-                        <br>
-                        <p><b class="font-bold">Dirigido por:</b> {{$item->Director}}</p>
-                    </div>
-                    <div class="px-6 py-4">
-                        <span
-                            class="inline-bloc bg-blue-600 rounded-full px-3 py-1 text-sm font-semibold text-gray-200"
-                            >{{ $item->Genero }}</span
-                        >
-                    </div>
-                </div>
-            @endforeach
-                </div>
+        <div class="container mx-auto">
+            <div class="container mt-12 border-info-400 border-b-2 w-1/4">
+                <h1 class="font-bold text-3xl">Peliculas Disponibles</h1>
             </div>
 
+            <div class="container mx-auto flex flex-row justify-between flex-wrap">
+            @foreach ($trailers as $item)
+            <div class="max-w-sm rounded overflow-hidden shadow-lg mt-10">
+                <iframe
+                    style="width: 100%;"
+                    height="215"
+                    src="{{ $item->Video }}"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                ></iframe>
+                <div class="px-6 py-4">
+                    <div class="font-bold text-black text-xl mb-2">{{ $item->Titulo }}</div>
+                    <p class="text-gray-700 text-base">
+                        {{ $item->Sinopsis }}
+                    </p>
+                    <br>
+                    <p><b class="font-bold">Dirigido por:</b> {{$item->Director}}</p>
+                </div>
+                <div class="px-6 py-4">
+                    <span
+                        class="inline-bloc bg-blue-600 rounded-full px-3 py-1 text-sm font-semibold text-gray-200"
+                        >{{ $item->Genero }}</span
+                    >
+                </div>
+            </div>
+            @endforeach
+            </div>
         </div>
+
+        <footer class="bg-blue-700 text-white shadow-xl p-4 mt-12 text-center">
+			Elvin Somón & Wagner Matos <br />
+			<i>Todos los derechos reservados </i>
+		</footer>
     </body>
 </html>
