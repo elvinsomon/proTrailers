@@ -18,7 +18,7 @@ class TrailersController extends Controller
     public function index(Request $request)
     {
         $keyword = $request->get('search');
-        $perPage = 25;
+        $perPage = 15;
 
         if (!empty($keyword)) {
             $trailers = Trailer::where('Titulo', 'LIKE', "%$keyword%")

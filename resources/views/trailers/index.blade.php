@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
+    <div class="container mx-auto ">
         <div class="row">
-            <div class="col-md-10">
-                <div class="card">
-                    <div class="card-header">Trailers</div>
+            <div class="col-md-10 mx-auto ">
+                <div class="card ">
+                    <div class="card-header text-xl">Listado de Trailers</div>
                     <div class="card-body">
                         <a href="{{ url('/trailers/create') }}" class="btn btn-success btn-sm" title="Add New Trailer">
                             <i class="fa fa-plus" aria-hidden="true"></i> Agregar
@@ -37,13 +37,13 @@
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $item->Titulo }}</td><td>{{ $item->Genero }}</td><td>{{ $item->Director }}</td><td>{{ $item->Fecha }}</td>
                                         <td>
-                                            <a href="{{ url('/trailers/' . $item->id) }}" title="View Trailer"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> Detalles</button></a>
-                                            <a href="{{ url('/trailers/' . $item->id . '/edit') }}" title="Edit Trailer"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Editar</button></a>
+                                            <a href="{{ url('/trailers/' . $item->id) }}" title="View Trailer"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> </button></a>
+                                            <a href="{{ url('/trailers/' . $item->id . '/edit') }}" title="Edit Trailer"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> </button></a>
 
                                             <form method="POST" action="{{ url('/trailers' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
                                                 {{ method_field('DELETE') }}
                                                 {{ csrf_field() }}
-                                                <button type="submit" class="btn btn-danger btn-sm" title="Delete Trailer" onclick="return confirm(&quot;Confirm delete?&quot;)"><i class="fa fa-trash-o" aria-hidden="true"></i> Eliminar</button>
+                                                <button type="submit" class="btn btn-danger btn-sm" title="Delete Trailer" onclick="return confirm(&quot;Confirm delete?&quot;)"><i class="fa fa-trash-o" aria-hidden="true"></i> </button>
                                             </form>
                                         </td>
                                     </tr>

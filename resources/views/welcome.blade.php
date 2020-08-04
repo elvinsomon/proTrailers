@@ -8,7 +8,6 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-        {{-- <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> --}}
         <link rel="stylesheet" href="{{ URL::asset('css/style.css')}}">
 
 
@@ -59,7 +58,7 @@
         </style>
     </head>
     <body>
-        <nav class="flex items-center justify-between flex-wrap bg-blue-300 p-6 shadow-xl">
+        <nav class="flex items-center justify-between flex-wrap bg-blue-800 p-6 shadow-xl">
 			<div class="flex items-center flex-shrink-0 text-white mr-6">
 				<svg
 					class="fill-current h-8 w-8 mr-2"
@@ -112,7 +111,7 @@
 				<div>
 					<a
 						href="{{ url('/trailers/') }}"
-						class="inline-block text-sm px-4 py-2 leading-none border rounded transition duration-200 ease-in-out transform hover:scale-110 text-white border-white hover:border-transparent hover:text-gray-700 hover:bg-white mt-4 lg:mt-0"
+						class="inline-block text-sm px-4 py-2 leading-none border rounded transition duration-200 ease-in-out transform hover:scale-110 hover:font-bold text-white border-white hover:border-transparent hover:text-gray-700 hover:bg-white mt-4 lg:mt-0"
 						>Iniciar Sesion</a
 					>
 				</div>
@@ -175,7 +174,7 @@
 
         </div>
 
-        <footer class="bg-blue-700 text-white shadow-xl p-4 mt-12 text-center">
+        <footer class="bg-blue-900 text-white shadow-xl p-4 mt-12 text-center">
 			Elvin Somón & Wagner Matos <br />
 			<i>Todos los derechos reservados </i>
 		</footer>
