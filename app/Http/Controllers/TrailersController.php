@@ -7,6 +7,7 @@ use App\Http\Requests;
 
 use App\Trailer;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class TrailersController extends Controller
 {
@@ -39,7 +40,7 @@ class TrailersController extends Controller
     public function galeria(Request $request)
     {
         $keyword = $request->get('search');
-        $perPage = 3;
+        $perPage = 6;
 
         if (!empty($keyword)) {
             $trailers = Trailer::where('Titulo', 'LIKE', "%$keyword%")
@@ -52,6 +53,7 @@ class TrailersController extends Controller
         } else {
             $trailers = Trailer::latest()->paginate($perPage);
         }
+
 
         return view('welcome', compact('trailers'));
 

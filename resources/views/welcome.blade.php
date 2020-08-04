@@ -120,31 +120,26 @@
 
 
 
-            {{-- @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif --}}
+
 
         <div class="container mx-auto">
             <div class="container mt-12 border-info-400 border-b-2 w-1/4">
                 <h1 class="font-bold text-3xl">Peliculas Disponibles</h1>
             </div>
 
+
+
+
             <div class="container mx-auto flex flex-row justify-between flex-wrap">
             @foreach ($trailers as $item)
             <div class="max-w-sm rounded overflow-hidden shadow-lg mt-10">
+                @php
+                    $urlFinal = Str::replaceFirst('watch?v=', 'embed/', $item->Video);
+                @endphp
                 <iframe
                     style="width: 100%;"
                     height="215"
-                    src="{{ $item->Video }}"
+                    src="{{$urlFinal}}"
                     frameborder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen
