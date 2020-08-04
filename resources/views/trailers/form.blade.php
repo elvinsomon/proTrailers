@@ -20,7 +20,7 @@
 </div>
 <div class="form-group {{ $errors->has('Fecha') ? 'has-error' : ''}}">
     <label for="Fecha" class="control-label">{{ 'Fecha' }}</label>
-    <input class="form-control" name="Fecha" type="text" id="Fecha" value="{{ isset($trailer->Fecha) ? $trailer->Fecha : ''}}" >
+    <input class="form-control" name="Fecha" type="date" id="Fecha" value="{{ isset($trailer->Fecha) ? $trailer->Fecha : ''}}" >
     {!! $errors->first('Fecha', '<p class="help-block">:message</p>') !!}
 </div>
 <div class="form-group {{ $errors->has('Video') ? 'has-error' : ''}}">

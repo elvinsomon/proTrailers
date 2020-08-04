@@ -52,9 +52,12 @@
                             </table>
                             <div class="pagination-wrapper"> {!! $trailers->appends(['search' => Request::get('search')])->render() !!} </div>
                         </div>
-
+                        <div class="bg-blue-500 text-white">
+                            <p></p>
+                        </div>
                     </div>
                 </div>
+                {{ $trailers->links() }}
             </div>
         </div>
     </div>

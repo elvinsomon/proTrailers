@@ -10,12 +10,37 @@
         "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
     },
     "devDependencies": {
+        "@tailwindcss/custom-forms": "^0.2",
         "axios": "^0.19",
         "cross-env": "^7.0",
         "laravel-mix": "^5.0.1",
+        "laravel-mix-tailwind": "^0.1.0",
         "lodash": "^4.17.13",
         "resolve-url-loader": "^3.1.0",
         "sass": "^1.15.2",
-        "sass-loader": "^8.0.0"
+        "sass-loader": "^8.0.0",
+        "tailwindcss": "^1.4",
+        "vue-template-compiler": "^2.6.11"
+    },
+    "name": "proTrailers",
+    "description": "<h2>Desarrolladores:</h2>  <ul><b>Elvin Somon</b> 2018-6795 <br></ul> <ul><b>Wagner Matos</b> 2018-6793</ul>",
+    "version": "1.0.0",
+    "main": "webpack.mix.js",
+    "directories": {
+        "test": "tests"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/elvinsomon/proTrailers.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/elvinsomon/proTrailers/issues"
+    },
+    "homepage": "https://github.com/elvinsomon/proTrailers#readme",
+    "dependencies": {
+        "tailwindcss": "^1.6.2"
     }
 }

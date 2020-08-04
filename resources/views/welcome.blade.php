@@ -8,7 +8,8 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-        <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+        {{-- <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> --}}
+        <link rel="stylesheet" href="{{ URL::asset('css/style.css')}}">
 
 
         <!-- Styles -->
@@ -21,35 +22,28 @@
                 height: 100vh;
                 margin: 0;
             }
-
             .full-height {
                 height: 100vh;
             }
-
             .flex-center {
                 align-items: center;
                 display: flex;
                 justify-content: center;
             }
-
             .position-ref {
                 position: relative;
             }
-
             .top-right {
                 position: absolute;
                 right: 10px;
                 top: 18px;
             }
-
             .content {
                 text-align: center;
             }
-
             .title {
                 font-size: 84px;
             }
-
             .links > a {
                 color: #636b6f;
                 padding: 0 25px;
@@ -59,7 +53,6 @@
                 text-decoration: none;
                 text-transform: uppercase;
             }
-
             .m-b-md {
                 margin-bottom: 30px;
             }
@@ -134,7 +127,6 @@
                         <a href="{{ url('/home') }}">Home</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
-
                         @if (Route::has('register'))
                             <a href="{{ route('register') }}">Register</a>
                         @endif
@@ -165,6 +157,8 @@
                     </p>
                     <br>
                     <p><b class="font-bold">Dirigido por:</b> {{$item->Director}}</p>
+                    <p><b class="font-bold">Fecha de estreno:</b> {{$item->Fecha}}</p>
+
                 </div>
                 <div class="px-6 py-4">
                     <span
@@ -175,6 +169,10 @@
             </div>
             @endforeach
             </div>
+            <div class="mt-5">
+                {{ $trailers->links() }}
+            </div>
+
         </div>
 
         <footer class="bg-blue-700 text-white shadow-xl p-4 mt-12 text-center">

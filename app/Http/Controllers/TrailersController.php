@@ -39,7 +39,7 @@ class TrailersController extends Controller
     public function galeria(Request $request)
     {
         $keyword = $request->get('search');
-        $perPage = 9;
+        $perPage = 3;
 
         if (!empty($keyword)) {
             $trailers = Trailer::where('Titulo', 'LIKE', "%$keyword%")
