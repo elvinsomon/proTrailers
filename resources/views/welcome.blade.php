@@ -60,18 +60,8 @@
     <body>
         <nav class="flex items-center justify-between flex-wrap bg-blue-800 p-6 shadow-xl">
 			<div class="flex items-center flex-shrink-0 text-white mr-6">
-				<svg
-					class="fill-current h-8 w-8 mr-2"
-					width="54"
-					height="54"
-					viewBox="0 0 54 54"
-					xmlns="http://www.w3.org/2000/svg"
-				>
-					<path
-						d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"
-					/>
-				</svg>
-				<span class="font-semibold text-2xl tracking-tight">Pro Trailers</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="fill-current h-8 w-12 mr-2 text-white" width="24" height="24" viewBox="0 0 24 24"><path d="M22 14.236v3.528l-2-1v-1.528l2-1zm2-3.236l-6 3v4l6 3v-10zm-10 2v5.5c0 .276-.224.5-.5.5h-9c-.276 0-.5-.224-.5-.5v-5.5c-.702 0-1.373-.127-2-.35v6.35c0 1.104.896 2 2 2h10c1.104 0 2-.896 2-2v-6.35c-.627.223-1.298.35-2 .35zm0-8c1.103 0 2 .897 2 2s-.897 2-2 2-2-.897-2-2 .897-2 2-2zm-10 0c1.103 0 2 .897 2 2s-.897 2-2 2-2-.897-2-2 .897-2 2-2zm10-2c-2.209 0-4 1.791-4 4s1.791 4 4 4 4-1.791 4-4-1.791-4-4-4zm-10 0c-2.209 0-4 1.791-4 4s1.791 4 4 4 4-1.791 4-4-1.791-4-4-4z"/></svg>
+				<span class="font-semibold text-3xl tracking-tight">Pro Trailers</span>
 			</div>
 			<div class="block lg:hidden">
 				<button
@@ -112,7 +102,7 @@
 					<a
 						href="{{ url('/trailers/') }}"
 						class="inline-block text-sm px-4 py-2 leading-none border rounded transition duration-200 ease-in-out transform hover:scale-110 hover:font-bold text-white border-white hover:border-transparent hover:text-gray-700 hover:bg-white mt-4 lg:mt-0"
-						>Iniciar Sesion</a
+						>Iniciar Sesión</a
 					>
 				</div>
 			</div>
@@ -124,7 +114,7 @@
 
         <div class="container mx-auto">
             <div class="container mt-12 border-info-400 border-b-2 w-1/4">
-                <h1 class="font-bold text-3xl">Peliculas Disponibles</h1>
+                <h1 class="font-bold text-3xl">Trailers Disponibles</h1>
             </div>
 
 
