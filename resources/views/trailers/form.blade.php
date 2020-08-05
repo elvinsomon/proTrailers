@@ -12,7 +12,19 @@
 
 <div class="form-group {{ $errors->has('Genero') ? 'has-error' : ''}}">
     <label for="Genero" class="control-label font-bold">{{ 'Genero' }}</label>
-    <input class="form-control" name="Genero" type="text" id="Genero" value="{{ isset($trailer->Genero) ? $trailer->Genero : ''}}" required>
+    <select class="form-control" name="Genero" id="Genero" >
+    <option value="{{ isset($trailer->Genero) ? $trailer->Genero : ''}}">{{ isset($trailer->Genero) ? $trailer->Genero : ''}}</option>
+        <option value="Drama">Drama</option>
+        <option value="Comedia">Comedia</option>
+        <option value="Suspenso">Suspenso</option>
+        <option value="Acción">Acción</option>
+        <option value="Ciencia Ficción">Ciencia Ficción</option>
+        <option value="Terror">Terror</option>
+        <option value="Musicales">Musicales</option>
+        <option value="Bélico">Bélico</option>
+        <option value="Aventura">Aventura</option>
+    </select>
+    {{-- <input class="form-control" name="Genero" type="text" id="Genero" value="{{ isset($trailer->Genero) ? $trailer->Genero : ''}}" required> --}}
     {!! $errors->first('Genero', '<p class="help-block">:message</p>') !!}
 </div>
 
@@ -36,5 +48,5 @@
 
 
 <div class="form-group">
-    <input class="btn btn-primary font-bold text-lg px-5" type="submit" value="{{ $formMode === 'edit' ? 'Actualizar' : 'Crear' }}">
+    <input class="btn text-white bg-blue-600 hover:bg-blue-700 font-bold text-lg px-5" type="submit" value="{{ $formMode === 'edit' ? 'Actualizar' : 'Crear' }}">
 </div>

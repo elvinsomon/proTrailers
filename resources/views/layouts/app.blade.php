@@ -55,6 +55,9 @@
             text-decoration: none;
             text-transform: uppercase;
         }
+        a{
+            text-decoration: none !important;
+        }
         .m-b-md {
             margin-bottom: 30px;
         }
@@ -103,7 +106,7 @@
 				<div>
 					<a
 						href="{{ url('/') }}"
-						class="inline-block text-sm px-4 py-2 leading-none border rounded transition duration-200 ease-in-out transform hover:scale-110 hover:font-bold text-white border-white hover:border-transparent hover:text-gray-700 lg:mt-0"
+						class="inline-block text-sm px-4 py-2 leading-none border rounded transition duration-200 ease-in-out transform hover:scale-110 hover:font-bold text-white border-white hover:border-transparent hover:text-gray-700 lg:mt-0 items-center"
 						>Ver Galería</a>
 				</div>
 			</div>

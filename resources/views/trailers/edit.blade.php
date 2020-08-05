@@ -5,9 +5,9 @@
         <div class="row">
             <div class="col-md-9 mx-auto">
                 <div class="card shadow-xl">
-                    <div class="card-header">Editar Trailer</div>
+                    <div class="card-header text-gray-700 text-2xl font-black">Editar Trailer</div>
                     <div class="card-body">
-                        <a href="{{ url('/trailers') }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
+                        <a href="{{ url('/trailers') }}" title="Regresar"><button class="btn text-gray-800 bg-yellow-500 hover:bg-yellow-400 btn-sm font-bold px-3 py-2"><i class="fa fa-arrow-left" aria-hidden="true"></i> Regresar</button></a>
                         <br />
                         <br />
 
