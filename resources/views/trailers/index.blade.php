@@ -4,10 +4,10 @@
     <div class="container mx-auto ">
         <div class="row">
             <div class="col-md-10 mx-auto ">
-                <div class="card ">
-                    <div class="card-header text-xl">Listado de Trailers</div>
+                <div class="card shadow-2xl">
+                    <div class="card-header text-gray-700 text-2xl font-black">Listado de Trailers</div>
                     <div class="card-body">
-                        <a href="{{ url('/trailers/create') }}" class="btn btn-success btn-sm" title="Add New Trailer">
+                        <a href="{{ url('/trailers/create') }}" class="btn btn-success btn-sm font-bold px-3 py-2" title="Agregar Nuevo Trailer">
                             <i class="fa fa-plus" aria-hidden="true"></i> Agregar
                         </a>
 
@@ -25,16 +25,18 @@
                         <br/>
                         <br/>
                         <div class="table-responsive">
-                            <table class="table">
+                            <table class="table table-borderless table-hover">
                                 <thead>
-                                    <tr>
+                                    <tr >
                                         <th> </th><th>Título</th><th>Género</th><th>Director</th><th>Fecha</th><th>Actions</th>
+
                                     </tr>
+
                                 </thead>
                                 <tbody>
                                 @foreach($trailers as $item)
                                     <tr>
-                                        <td>{{ $loop->iteration }}</td>
+                                        <td class="font-bold">{{ $loop->iteration }}</td>
                                         <td>{{ $item->Titulo }}</td><td>{{ $item->Genero }}</td><td>{{ $item->Director }}</td><td>{{ $item->Fecha }}</td>
                                         <td>
                                             <a href="{{ url('/trailers/' . $item->id) }}" title="View Trailer"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> </button></a>

@@ -5,9 +5,9 @@
         <div class="row">
             <div class="col-md-9 mx-auto">
                 <div class="card shadow-xl">
-                    <div class="card-header">Crear un Nuevo Trailer</div>
+                    <div class="card-header text-gray-700 text-2xl font-black">Crear un Nuevo Trailer</div>
                     <div class="card-body">
-                        <a href="{{ url('/trailers') }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
+                        <a href="{{ url('/trailers') }}" title="Back"><button class="btn btn-warning btn-sm font-bold px-3 py-2"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
                         <br />
                         <br />
 
