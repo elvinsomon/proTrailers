@@ -64,7 +64,7 @@
     </style>
 </head>
 <body>
-    <div id="app">
+    <div id="app" class="flex flex-col justify-between full-height">
         <nav class="flex items-center justify-between flex-wrap bg-blue-800 p-6 shadow-xl">
             <a href="{{ url('/') }}">
                 <div class="flex items-center flex-shrink-0 text-white mr-6">
@@ -111,9 +111,7 @@
             <i>Todos los derechos reservados </i>
         </footer>
     </div>
-
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
 </body>
+<!-- Scripts -->
+<script src="{{ asset('js/app.js') }}"></script>
 </html>
