@@ -1,17 +1,17 @@
 <div class="form-group {{ $errors->has('Titulo') ? 'has-error' : ''}}">
-    <label for="Titulo" class="control-label font-bold">{{ 'Titulo' }}</label>
+    <label for="Titulo" class="control-label font-bold">Título</label>
     <input class="form-control" name="Titulo" type="text" id="Titulo" value="{{ isset($trailer->Titulo) ? $trailer->Titulo : ''}}" required>
     {!! $errors->first('Titulo', '<p class="help-block">:message</p>') !!}
 </div>
 
 <div class="form-group {{ $errors->has('Sinopsis') ? 'has-error' : ''}}">
-    <label for="Sinopsis" class="control-label font-bold">{{ 'Sinopsis' }}</label>
+    <label for="Sinopsis" class="control-label font-bold">Sinópsis</label>
     <textarea class="form-control" rows="5" name="Sinopsis" type="textarea"required id="Sinopsis" >{{ isset($trailer->Sinopsis) ? $trailer->Sinopsis : ''}}</textarea>
     {!! $errors->first('Sinopsis', '<p class="help-block">:message</p>') !!}
 </div>
 
 <div class="form-group {{ $errors->has('Genero') ? 'has-error' : ''}}">
-    <label for="Genero" class="control-label font-bold">{{ 'Genero' }}</label>
+    <label for="Genero" class="control-label font-bold">Género</label>
     <select class="form-control" name="Genero" id="Genero" >
     <option value="{{ isset($trailer->Genero) ? $trailer->Genero : ''}}">{{ isset($trailer->Genero) ? $trailer->Genero : ''}}</option>
         <option value="Drama">Drama</option>
@@ -35,13 +35,13 @@
 </div>
 
 <div class="form-group {{ $errors->has('Fecha') ? 'has-error' : ''}}">
-    <label for="Fecha" class="control-label font-bold">{{ 'Fecha' }}</label>
+    <label for="Fecha" class="control-label font-bold">Fecha de Estreno</label>
     <input class="form-control" name="Fecha" type="date" id="Fecha" value="{{ isset($trailer->Fecha) ? $trailer->Fecha : ''}}" required>
     {!! $errors->first('Fecha', '<p class="help-block">:message</p>') !!}
 </div>
 
 <div class="form-group {{ $errors->has('Video') ? 'has-error' : ''}}">
-    <label for="Video" class="control-label font-bold">{{ 'Video' }}</label>
+    <label for="Video" class="control-label font-bold">Video</label>
     <input class="form-control" name="Video" type="text" id="Video" value="{{ isset($trailer->Video) ? $trailer->Video : ''}}" required>
     {!! $errors->first('Video', '<p class="help-block">:message</p>') !!}
 </div>

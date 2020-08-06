@@ -5,7 +5,7 @@
 
         <div class="col-md-9 mx-auto">
             <div class="card shadow-xl">
-                <div class="card-header text-gray-700 text-2xl font-black">Trailer "{{ $trailer->Titulo }}"</div>
+                <div class="card-header text-gray-700 text-2xl font-bold">Trailer "{{ $trailer->Titulo }}"</div>
                 <div class="card-body">
 
                     <a href="{{ url('/trailers') }}" title="Back"><button class="btn text-white bg-yellow-600 hover:bg-yellow-700 btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Regresar</button></a>

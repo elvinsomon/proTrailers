@@ -5,12 +5,13 @@
         <div class="row">
             <div class="col-md-10 mx-auto">
                 <div class="card shadow-2xl">
-                    <div class="card-header text-gray-700 text-2xl font-black">Listado de Trailers</div>
+                    <div class="card-header text-gray-700 text-3xl font-bold">Listado de Trailers</div>
                     <div class="card-body">
                         <a href="{{ url('/trailers/create') }}" class="btn text-white bg-green-600 hover:bg-green-700 btn-sm  font-bold px-3 py-2" title="Agregar Nuevo Trailer">
                             <i class="fa fa-plus" aria-hidden="true"></i> Agregar
                         </a>
 
+                        {{-- Funcio  buscar --}}
                         {{-- <form method="GET" action="{{ url('/trailers') }}" accept-charset="UTF-8" class="form-inline my-2 my-lg-0 float-right" role="search">
                             <div class="input-group">
                                 <input type="text" class="form-control bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" name="search" placeholder="Buscar..." value="{{ request('search') }}">
@@ -26,9 +27,9 @@
                         <br/>
                         <div class="table-responsive">
                             <table class="table table-borderless table-hover">
-                                <thead>
-                                    <tr >
-                                        <th> </th><th>Título</th><th>Género</th><th>Director</th><th>Fecha</th><th>Actions</th>
+                                <thead >
+                                    <tr>
+                                        <th> </th><th>Título</th><th>Género</th><th>Director</th><th>Estreno</th><th>Actiones</th>
                                     </tr>
 
                                 </thead>
