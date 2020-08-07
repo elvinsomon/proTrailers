@@ -18,8 +18,7 @@ use Illuminate\Support\Facades\Route;
 // });
 Route::get('/', 'TrailersController@galeria');
 
-
-Route::resource('trailers', 'TrailersController');
+Route::resource('trailers', 'TrailersController')->middleware('auth');
 
 Auth::routes(['reset'=>false]);
 
